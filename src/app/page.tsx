@@ -1,103 +1,145 @@
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import NewNavbar from './components/NewNavbar';
+import Newbar from './components/Newbar';
+import Check from './components/Check';
+import Section from './components/Section';
+import Events from './components/Events';
+import NewPics from './components/NewPics';
+import NewTag from './components/NewTag';
+import LeftPic from './components/LeftPic';
+import NewFlex from './components/NewFlex';
+import NewDiv from './components/NewDiv';
+import SubscribeSection from './components/SubscribeSection';
+import './globals.css'; 
+import { Poppins, Inter, Geist, Geist_Mono } from 'next/font/google';
+import Footer from './components/Footer';
 
-export default function Home() {
+import { Open_Sans } from 'next/font/google';
+import NavContact from './components/NavContact';
+import NewOut from './components/NewOut';
+import { imageOptimizer } from 'next/dist/server/image-optimizer';
+
+
+
+
+
+export default function Home() {  
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    
+      <div>
+        <></>
+        <NewNavbar/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <div className="absolute inset-0 overflow-hidden">
+        <img className="w-1920 h-172 object-cover * bg-cover * bg-center bg-no-repeat "
+          src="/bgimg.jpg  "
+          alt="RV Show" 
+            draggable="false" 
+        /> 
+        
+       
+      </div>
+ <section className="relative w-full h-screen mt-10">
+      {/* Background Image with Dark Overlay */}
+      <div className="absolute inset-0">
+        <Image
+          src="/bgimg.jpg" 
+          alt="Background"
+          className="w-full h-full object-cover"
+          fill
+        />
+        <div className="absolute inset-0 bg-black/60"></div> {/* Dark overlay */}
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6 lg:px-8">
+        <h1 className="text-white font-open_sans text-6xl sm:text-6xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          Explore the Future <br /> With <span className="inline-block">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/avr.png" // VRA logo path
+              alt="VRA"
+              width={150}
+              height={50}
+              className="inline-block ml-2"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </span>
+        </h1>
+        <p className="text-gray-300 mt-4 sm:mt-6 text-sm sm:text-base md:text-lg max-w-xl">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+
+        {/* Buttons */}
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition ">
+              Book Now →
+          </button>
+          <button className="px-6 py-3 font-open_sans text-white rounded-full hover:bg-white hover:text-black transition">
+            Explore VR Packages
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+
+<div>
+  <NavContact/>
+
+ <hr/>
+</div>
+
+ 
+  <NewOut/>
+ <hr/>
+ <Newbar/>
+<hr/>
+  <Check/>
+  <hr/>
+ <Section/>
+
+ <hr/>
+
+ <section>
+       <Events/>
+     </section>
+     
+
+
+<section>
+  <NewPics/>
+</section>
+
+<section>
+  <NewTag/>
+</section>
+    
+<section>
+  <LeftPic/>
+</section>
+
+<section>
+  <NewFlex/>
+</section>
+
+<section>
+  <NewDiv/>
+</section>
+
+<section>
+  <SubscribeSection/>
+</section>
+
+<section>
+  <Footer/>
+</section>
+
+    </section>
+    
+    
+    
+
+      
+      </div>
+    
   );
 }
+
+
