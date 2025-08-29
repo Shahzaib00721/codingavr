@@ -9,9 +9,9 @@ export default function AboutUs() {
         {/* Left Content */}
         <div>
           <h4 className="text-sky-400 text-2xl font-semibold mb-2">About Us</h4>
-          <h2 className="text-3xl md:text-5xl font-bold leading-snug">
-            Transforming Reality Through
-            Immersive Innovation
+          <h2 className="text-3xl md:text-5xl font-bold leading-[60px]">
+            Transforming Reality Through Immersive Innovation
+          
           </h2>
 
           <hr className="my-4 border-gray-700" />

@@ -22,7 +22,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-open);
+  
+   font-family: "Open Sans", sans-serif;
 }
 
 .inter  {
@@ -38,5 +39,5 @@ body {
   font-family: "open", sans-serif;
 }
 .open_sans {
-  font-family: "open-sans", sans-serif;
+  font-family: "open_sans", sans-serif;
 }
